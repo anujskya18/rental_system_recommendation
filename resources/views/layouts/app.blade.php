@@ -70,7 +70,7 @@
                                 </a>
                                 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="transaction.html">Transactions History</a>
+                                    <a class="dropdown-item" href="{{route('users.orders')}}">Transactions History</a>
                                     <a class="dropdown-item" href="setting.html">Settings</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
@@ -104,41 +104,38 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <h5>About</h5>
                     <p>Nisi esse dolor irure dolor eiusmod ex deserunt proident cillum eu qui enim occaecat sunt aliqua anim eiusmod qui ut voluptate.</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <h5>Links</h5>
                     <ul>
                         <li>
-                            <a href="about.html">About</a>
+                            <a href="about.html">Home</a>
                         </li>
                         <li>
-                            <a href="contact.html">Contact Us</a>
+                            <a href="contact.html">Shop</a>
                         </li>
                         <li>
-                            <a href="faq.html">FAQ</a>
+                            <a href="faq.html">Cart</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)">How it Works</a>
+                            <a href="javascript:void(0)">Transaction </a>
                         </li>
                         <li>
-                            <a href="terms.html">Terms</a>
-                        </li>
-                        <li>
-                            <a href="privacy.html">Privacy Policy</a>
+                            <a href="terms.html">Setting</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                      <h5>Contact</h5>
                      <ul>
-                         <li>
+                         {{-- <li>
                             <a href="tel:+620892738334"><i class="fa fa-phone"></i> 08272367238</a>
-                        </li>
+                        </li> --}}
                         <li>
-                            <a href="mailto:hello@domain.com"><i class="fa fa-envelope"></i> hello@domain.com</a>
+                            <a href="mailto:OnlineRentalSystem"><i class="fa fa-envelope"></i> hello@domain.com</a>
                          </li>
                      </ul>
 
@@ -155,7 +152,7 @@
                          </li>
                      </ul>
                 </div>
-                <div class="col-md-3">
+                {{-- <div class="col-md-3">
                      <h5>Get Our App</h5>
                      <ul class="mb-0">
                          <li class="download-app">
@@ -167,10 +164,10 @@
                              </div>
                          </li>
                      </ul>
-                </div>
+                </div> --}}
             </div>
         </div>
-        <p class="copyright">&copy; 2018 Freshcery | Groceries Organic Store. All rights reserved.</p>
+        <p class="copyright">&copy; 2024 Online Rental System </p>
     </footer>
 
     <script type="text/javascript" src="{{asset('assets/js/jquery.js')}}"></script>

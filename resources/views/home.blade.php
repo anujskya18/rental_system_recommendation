@@ -11,12 +11,13 @@
                 </video>
                 <div class="container">
                     <h1 class="pt-5">
-                        Save time and leave the<br>
-                        groceries to us.
+                       Rent<br>
+                       Use<br>
+                       Return<br>
                     </h1>
-                    <p class="lead">
+                    {{-- <p class="lead">
                         Always Fresh Everyday.
-                    </p>
+                    </p> --}}
 
                     <div class="row">
                         <div class="col-md-4">
@@ -28,11 +29,11 @@
                                 </div>
                                 <div class="card-body">
                                     <h4 class="card-title">
-                                        Buy
+                                        Rent
                                     </h4>
-                                    <p class="card-text">
+                                    {{-- <p class="card-text">
                                         Simply click-to-buy on the product you want and submit your order when you're done.
-                                    </p>
+                                    </p> --}}
 
                                 </div>
                             </div>
@@ -46,11 +47,11 @@
                                 </div>
                                 <div class="card-body">
                                     <h4 class="card-title">
-                                        Harvest
+                                        Use
                                     </h4>
-                                    <p class="card-text">
+                                    {{-- <p class="card-text">
                                         Our team ensures the produce quality is up to our standard and delivers to your door within 24 hours of harvest day.
-                                    </p>
+                                    </p> --}}
 
                                 </div>
                             </div>
@@ -64,11 +65,11 @@
                                 </div>
                                 <div class="card-body">
                                     <h4 class="card-title">
-                                        Delivery
+                                        Return
                                     </h4>
-                                    <p class="card-text">
+                                    {{-- <p class="card-text">
                                         Farmers receive your orders two days in advance so they can prepare for harvest exactly as your orders – no wasted produce.
-                                    </p>
+                                    </p> --}}
                                 </div>
                             </div>
                         </div>

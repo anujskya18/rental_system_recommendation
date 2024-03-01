@@ -1,0 +1,125 @@
+## Electronics:
+
+1. *Laptop*
+   - Description: High-performance laptop for work and entertainment.
+   - Daily Rate: $15.99
+
+2. *Bluetooth Speaker*
+   - Description: Portable Bluetooth speaker with crisp sound quality.
+   - Daily Rate: $7.99
+
+3. *Camera Drone*
+   - Description: Drone with built-in camera for aerial photography.
+   - Daily Rate: $22.99
+
+4. *Fitness Tracker*
+   - Description: Wearable fitness tracker for health monitoring.
+   - Daily Rate: $5.99
+
+5. *Tablet*
+   - Description: Sleek tablet for browsing and multimedia consumption.
+   - Daily Rate: $12.99
+
+6. *Smartwatch*
+   - Description: Smartwatch with fitness features and notifications.
+   - Daily Rate: $9.99
+
+7. *Virtual Reality Headset*
+   - Description: Immersive VR headset for gaming and experiences.
+   - Daily Rate: $18.99
+
+8. *Portable Projector*
+   - Description: Compact projector for on-the-go entertainment.
+   - Daily Rate: $14.99
+
+9. *Digital Camera*
+   - Description: Digital camera for capturing high-quality photos.
+   - Daily Rate: $17.99
+
+10. *Wireless Earbuds*
+    - Description: Wireless earbuds with noise cancellation features.
+    - Daily Rate: $10.99
+
+### Kitchen:
+
+1. *Stand Mixer*
+   - Description: Powerful stand mixer for baking and cooking.
+   - Daily Rate: $14.99
+
+2. *Coffee Maker*
+   - Description: Automatic coffee maker for brewing delicious coffee.
+   - Daily Rate: $8.99
+
+3. *Blender*
+   - Description: High-speed blender for smoothies and food processing.
+   - Daily Rate: $11.99
+
+4. *Air Fryer*
+   - Description: Modern air fryer for healthier frying and cooking.
+   - Daily Rate: $9.99
+
+5. *Juicer*
+   - Description: Electric juicer for fresh and nutritious fruit juices.
+   - Daily Rate: $7.49
+
+6. *Toaster Oven*
+   - Description: Versatile toaster oven for baking and toasting.
+   - Daily Rate: $6.99
+
+7. *Knife Set*
+   - Description: Premium knife set for precision cutting in the kitchen.
+   - Daily Rate: $12.99
+
+8. *Slow Cooker*
+   - Description: Slow cooker for convenient and flavorful meals.
+   - Daily Rate: $10.99
+
+9. *Espresso Machine*
+   - Description: Espresso machine for crafting barista-quality drinks.
+   - Daily Rate: $15.99
+
+10. *Rice Cooker*
+    - Description: Automatic rice cooker for perfectly cooked rice.
+    - Daily Rate: $8.49
+
+### Trekking:
+
+1. *Hiking Backpack*
+   - Description: Durable hiking backpack with ample storage space.
+   - Daily Rate: $10.99
+
+2. *Trekking Poles*
+   - Description: Lightweight trekking poles for stability on trails.
+   - Daily Rate: $5.99
+
+3. *Camping Tent*
+   - Description: Spacious camping tent for outdoor adventures.
+   - Daily Rate: $12.99
+
+4. *Sleeping Bag*
+   - Description: Insulated sleeping bag for a cozy night's sleep.
+   - Daily Rate: $8.99
+
+5. *Portable Camping Stove*
+   - Description: Compact stove for cooking during camping trips.
+   - Daily Rate: $6.99
+
+6. *Water Filtration System*
+   - Description: Portable water filter for safe drinking in the wilderness.
+   - Daily Rate: $9.99
+
+7. *Headlamp*
+   - Description: LED headlamp for hands-free illumination during hikes.
+   - Daily Rate: $4.99
+
+8. *Trekking Boots*
+   - Description: Sturdy trekking boots for comfortable long walks.
+   - Daily Rate: $15.99
+
+9. *Compact Binoculars*
+   - Description: Binoculars for observing wildlife and scenic views.
+   - Daily Rate: $7.99
+
+10. *Camping Chair*
+    - Description: Lightweight and foldable camping chair for relaxation.
+    - Daily Rate: $5.49

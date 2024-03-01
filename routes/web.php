@@ -35,5 +35,5 @@ Route::get('products/pay', [App\Http\Controllers\Products\ProductsController::cl
 
 
 //users pages
-Route::get('users/myOrders', [App\Http\Controllers\Users\UsersController::class, 'myOrders'])->name('users.orders');
+Route::get('users/my-orders', [App\Http\Controllers\Users\UsersController::class, 'myOrders'])->name('users.orders');
 
