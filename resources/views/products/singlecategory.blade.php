@@ -50,6 +50,7 @@
                                                 {{-- <span class="discount">Rp. 300.000</span> --}}
                                                 <span class="reguler">Rs. {{$product->price}}</span>
                                             </div>
+                                            
                                             <a href="{{route('single.product',$product->id)}}" class="btn btn-block btn-primary">
                                                 Display Detail
                                             </a>

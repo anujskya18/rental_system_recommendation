@@ -20,9 +20,9 @@ class ProductsController extends Controller
     }
     public  function singleProduct($id){
         $product = Product::find($id);
-        $relatedProducts = Product::where('category_id',$product->category_id)->where('id','!=',$id)->get();
+        // $relatedProducts = Product::where('category_id',$product->category_id)->where('id','!=',$id)->get();
     $checkInCart = Cart::where('pro_id',$id)    ->where('user_id',Auth::user()->id)->count();
-        return view('products.singleproduct',compact('product','relatedProducts','checkInCart'));
+        return view('products.singleproduct',compact('product','checkInCart'));
     }
     public  function shop(){
         $categories= Category::select()->orderBy('id','desc')->get();  

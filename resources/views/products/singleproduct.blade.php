@@ -23,6 +23,7 @@
         </div>
         @endif
     </div>
+
     <div class="product-detail">
         <div class="container">
             <div class="row">
@@ -81,54 +82,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="title">Related Products</h2>
-                    <div class="product-carousel owl-carousel">
-                        @if ($relatedProducts->count()>0)
-                        @foreach ($relatedProducts as $relatedProduct)
-                        <div class="item">
-                            <div class="card card-product">
-                                <div class="card-ribbon">
-                                    <div class="card-ribbon-container right">
-                                        <span class="ribbon ribbon-primary">SPECIAL</span>
-                                    </div>
-                                </div>
-                                <div class="card-badge">
-                                    <div class="card-badge-container left">
-                                        <span class="badge badge-primary">
-                                            Until {{$relatedProduct->exp_date}}
-                                        </span>
-                                        <span class="badge badge-primary">
-                                            20% OFF
-                                        </span>
-                                    </div>
-                                    <img src="{{asset('assets/img/'.$relatedProduct->image.'')}}" alt="Card image 2" class="card-img-top">
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="{{route('single.product',$relatedProduct->id)}}">{{$relatedProduct->name}}</a>
-                                    </h4>
-                                    <div class="card-price">
-                                        <span class="reguler">Rs. {{$relatedProduct->price}}</span>
-                                        {{-- <span class="reguler">Rp. 200.000</span> --}}
-                                    </div>
-                                    <a href="{{route('single.product',$relatedProduct->id)}}" class="btn btn-block btn-primary">
-                                        Product Detail
-                                    </a>
-
-                                </div>
-                            </div>
-                        </div>     
-                        @endforeach
-                        @else    
-                        <p class="bg-alert alert-success">No products</p>
-
-                        @endif
-                        
-                       
-                    </div>
+                    <h2 class="title">Related Products</h2> 
+                    @include('products.index')
+                  
                 </div>
-            </div>
-        </div>
+            </div>   
+
+        </div>  
     </section>
 </div>
 
