@@ -21,8 +21,12 @@ class ProductsController extends Controller
     public  function singleProduct($id){
         $product = Product::find($id);
         // $relatedProducts = Product::where('category_id',$product->category_id)->where('id','!=',$id)->get();
-    $checkInCart = Cart::where('pro_id',$id)    ->where('user_id',Auth::user()->id)->count();
-        return view('products.singleproduct',compact('product','checkInCart'));
+        if(isset(Auth::user()->id)){
+                $checkInCart = Cart::where('pro_id',$id)->where('user_id',Auth::user()->id)->count();
+            return view('products.singleproduct',compact('product','checkInCart'));
+        }else
+        return view('products.singleproduct',compact('product'));
+
     }
     public  function shop(){
         $categories= Category::select()->orderBy('id','desc')->get();  
@@ -86,7 +90,7 @@ public function processCheckout(Request $request){
     $checkout = Order::create([
 
         "name" => $request->name,
-        "last_name" => $request->last_name,
+        // "last_name" => $request->last_name,
         "address" => $request->address,
         "email" => $request->email,
         "phone_number" => $request->phone_number,

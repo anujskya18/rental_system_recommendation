@@ -29,9 +29,9 @@
                                 <div class="col">
                                     <input class="form-control" name="name" placeholder="Name" type="text">
                                 </div>
-                                <div class="col">
+                                {{-- <div class="col">
                                     <input class="form-control" name="last_name" placeholder="Last Name" type="text">
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="form-group">
                                 <input class="form-control" name="address" placeholder="Address" type="text" >

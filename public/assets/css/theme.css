@@ -189,10 +189,11 @@ section .card-title {
   color: #E91E63;
 }
 .page-header .navbar .avatar-header {
-  width: 25px;
-  height: 25px;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
   overflow: hidden;
-  border: 1px solid #eee;
+  border: 2px solid #eee;
   border-radius: 50%;
   display: inline-table;
 }
