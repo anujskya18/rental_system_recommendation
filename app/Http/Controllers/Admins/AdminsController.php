@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Admins;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Models\Product\Product;
+use App\Models\Product\Order;
+use App\Models\Admin\Admin;
+use App\Models\Product\Category;
 class AdminsController extends Controller
 {
     public function viewLogin(){
@@ -22,6 +25,25 @@ class AdminsController extends Controller
     }
     
     public function index(){
-        return view('admins.index');
+
+        $productsCount =Product::select()->count();
+        $ordersCount =Order::select()->count();
+        $categoriesCount =Category::select()->count();
+        $adminsCount =Admin::select()->count();
+        return view('admins.index',compact('productsCount','ordersCount','categoriesCount','adminsCount'));
     }
+
+    public function displayAdmins(){
+        $allAdmins =Admin::all();
+        return view('admins.alladmins',compact('allAdmins'));
+    }
+    public function displayCategories(){
+        $allCategories =Category::select()->orderby('id')->get();
+        return view('admins.allcategories',compact('allCategories'));
+    }
+    public function displayProducts(){
+        $allProducts =Product::select()->orderby('id')->get();
+        return view('admins.allproducts',compact('allProducts'));
+    }
+    
  }

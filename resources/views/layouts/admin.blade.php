@@ -7,6 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
      <link href="{{asset('assets/styles/style.css')}}" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://raw.githubusercontent.com/kartik-v/bootstrap-star-rating/master/css/star-rating.min.css'>
+
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
@@ -14,7 +17,7 @@
 <div id="wrapper">
     <nav class="navbar header-top fixed-top navbar-expand-lg  navbar-dark bg-dark">
       <div class="container">
-      <a class="navbar-brand" href="#">LOGO</a>
+      <a class="navbar-brand" href="#">Admin Panel</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,18 +27,18 @@
         @auth('admin')
         <ul class="navbar-nav side-nav" >
             <li class="nav-item">
-              <a class="nav-link text-white" style="margin-left: 20px;" href="route('admins.dashboard')">Home
+              <a class="nav-link" style="margin-left: 20px;" href="{{route('admins.dashboard')}}">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="admins/admins.html" style="margin-left: 20px;">Admins</a>
+              <a class="nav-link" href="{{route('admins.all')}}" style="margin-left: 20px;">Admins</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="categories-admins/show-categories.html" style="margin-left: 20px;">Categories</a>
+              <a class="nav-link" href="{{route('categores.all')}}" style="margin-left: 20px;">Categories</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="products-admins/show-products.html" style="margin-left: 20px;">Products</a>
+              <a class="nav-link" href="{{route('products.all')}}" style="margin-left: 20px;">Products</a>
             </li>
   
             <li class="nav-item">
@@ -49,7 +52,7 @@
 
             @auth('admin')
                 <li class="nav-item">
-                    <a class="nav-link" href="route('admins.dashboard')">Home
+                    <a class="nav-link" href="{{route('admins.dashboard')}}">Home
                     <span class="sr-only">(current)</span>
                     </a>
                 </li>

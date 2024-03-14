@@ -43,7 +43,10 @@ Route::get('users/my-orders', [App\Http\Controllers\Users\UsersController::class
 Route::get('admin/login', [App\Http\Controllers\Admins\AdminsController::class, 'viewLogin'])->name('view.login')->middleware('check.for.auth');
 Route::post('admin/login', [App\Http\Controllers\Admins\AdminsController::class, 'checkLogin'])->name('check.login');
 
-Route::group(['prefix' => 'admin','middleware' => 'auth:admin'],function() {
+Route::group(['prefix' => '/admin','middleware' => 'auth:admin'],function() {
     Route::get('index', [App\Http\Controllers\Admins\AdminsController::class, 'index'])->name('admins.dashboard');
+    Route::get('all-admins', [App\Http\Controllers\Admins\AdminsController::class, 'displayAdmins'])->name('admins.all');
+    Route::get('all-categories', [App\Http\Controllers\Admins\AdminsController::class, 'displayCategories'])->name('categores.all');
+    Route::get('all-products', [App\Http\Controllers\Admins\AdminsController::class, 'displayProducts'])->name('products.all');
 
 });
