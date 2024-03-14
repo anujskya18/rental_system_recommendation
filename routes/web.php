@@ -36,5 +36,14 @@ Route::get('products/pay', [App\Http\Controllers\Products\ProductsController::cl
 
 
 //users pages
+
 Route::get('users/my-orders', [App\Http\Controllers\Users\UsersController::class, 'myOrders'])->name('users.orders')->middleware('auth:web');
 
+//admin panel
+Route::get('admin/login', [App\Http\Controllers\Admins\AdminsController::class, 'viewLogin'])->name('view.login')->middleware('check.for.auth');
+Route::post('admin/login', [App\Http\Controllers\Admins\AdminsController::class, 'checkLogin'])->name('check.login');
+
+Route::group(['prefix' => 'admin','middleware' => 'auth:admin'],function() {
+    Route::get('index', [App\Http\Controllers\Admins\AdminsController::class, 'index'])->name('admins.dashboard');
+
+});
