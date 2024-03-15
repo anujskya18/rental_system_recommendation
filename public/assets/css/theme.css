@@ -393,10 +393,13 @@ section .card-title {
   }
 }
 footer {
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8; */
+  color: #FFF;
+
+  background-color: #343a40 !important;
   padding: 50px 0;
   padding-bottom: 0;
-  border-top: 1px solid #eee;
+  /* border-top: 1px solid #eee; */
 }
 footer h5 {
   font-size: 1rem;
@@ -415,7 +418,8 @@ footer ul li {
   margin: 0.5rem 0;
 }
 footer ul li a {
-  color: #333333;
+  /* color: #333333; */
+  color: #FFF;
 }
 footer ul li a:hover, footer ul li a:focus {
   color: #E91E63;

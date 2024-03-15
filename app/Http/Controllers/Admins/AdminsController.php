@@ -8,6 +8,7 @@ use App\Models\Product\Product;
 use App\Models\Product\Order;
 use App\Models\Admin\Admin;
 use App\Models\Product\Category;
+use Redirect;
 class AdminsController extends Controller
 {
     public function viewLogin(){
@@ -44,6 +45,46 @@ class AdminsController extends Controller
     public function displayProducts(){
         $allProducts =Product::select()->orderby('id')->get();
         return view('admins.allproducts',compact('allProducts'));
+    }public function displayOrders(){
+        $allOrders =Order::select()->orderby('id')->get();
+        return view('admins.allorders',compact('allOrders'));
+    }
+
+    public function createProducts(){
+        $allCategories = Category::all();
+        return view('admins.createproducts',compact('allCategories'));
+    } 
+    public function storeProducts(Request $request){
+
+        $destinationPath = 'assets/img/';
+        $myimage = $request->image->getClientOriginalName();
+        $request->image->move(public_path($destinationPath),$myimage);
+
+        $storeProducts = Product::create([
+            "name" => $request->name,
+            "price" => $request->price,
+            "description" => $request->description,
+            "category_id" => $request->category_id,
+            "exp_date" => $request->exp_date,
+            "rating" => $request->rating,
+            "image" => $myimage,
+            
+        ]);
+        if($storeProducts){
+            
+            return Redirect::route('products.all')->with(['success' =>'Product Added !']);
+        }
+    }
+    public function deleteProducts($id){
+        $product = Product::find($id);
+        // if(File::exists(public_path('/assets/img/'. $product->image))){
+        //     File::delete(public_path('/assets/img/'. $product->image));
+        // }
+        $product->delete();
+        if($product){
+            
+            return Redirect::route('products.all')->with(['delete' =>'Product Deleted !']);
+        }
     }
     
  }

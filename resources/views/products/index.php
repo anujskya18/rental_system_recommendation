@@ -16,15 +16,22 @@ require_once 'content_based.php';
 
     $url = $_SERVER['REQUEST_URI']; // Get the current URL
     $newUrl = str_replace('/products/single-product/', '', $url);
-    echo $newUrl;
+    // echo $newUrl;
 
     $sql = "SELECT * FROM products WHERE id = $newUrl; ";
     $result = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_assoc($result)) {
             $r_id=$row['category_id'];
             $r_price=$row['price'];
-            $r_address=$row['address'];
+            // $r_address=$row['address'];
             $r_rating=$row['rating'];
+        }
+        $id=Auth::id();
+        echo "Recommendation with user_id :".$id;
+    $sql = "SELECT * FROM users WHERE id = $id ";
+    $result = mysqli_query($conn, $sql);
+        while($row = mysqli_fetch_assoc($result)) {
+            $r_address=$row['address'];
         }
 
 
@@ -36,11 +43,11 @@ require_once 'content_based.php';
         while($row = mysqli_fetch_assoc($result)) {
             $pname=$row['name'];
             $price=$row['price'];
-            $address=$row['address'];
+            $r_address=$row['address'];
             $rating=$row['rating'];
-            $objects[$pname] = [$price, $address, $rating ];
             // echo "price: " . $row["price"]. "\t address: " . $row["address"]. " rating: " . $row["rating"]. "<br>";
-
+            
+            $objects[$pname] = [$price, $r_address, $rating ];
         }
     } else {
         echo "0 results";

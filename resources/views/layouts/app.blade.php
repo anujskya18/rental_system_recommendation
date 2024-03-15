@@ -40,7 +40,7 @@
             <div class="container">
                 <!-- Navbar Brand -->
                 <a href="{{url('/')}}" class="navbar-brand">
-                    <img src="{{asset('assets/img/logo/logo.png')}}" alt="">
+                    <img src="{{asset('assets/img/logo/log.png')}}" alt="LOGO">
                 </a>
 
                 <!-- Toggle Button -->
@@ -98,12 +98,12 @@
         </div>
     </div>
    
-        <main class="py-4">
+        <main class="pb-1">
             @yield('content')
         </main>
     </div>
     <footer>
-        <div class="container">
+        <div class="container"     background-color: #343a40 !important;>
             <div class="row">
                 <div class="col-md-4">
                     <h5>About</h5>

@@ -6,8 +6,15 @@
     <div class="col">
       <div class="card">
         <div class="card-body">
+          <div class="container">
+            @if(\Session::has('success'))
+            <div class="alert alert-success">
+                <p>{!!\Session::get('success')!!}</p>
+            </div>
+            @endif
+          </div>
           <h5 class="card-title mb-4 d-inline">Products</h5>
-          <a  href="create-products.html" class="btn btn-primary mb-4 text-center float-right">Create Products</a>
+          <a  href="{{route('products.create')}}" class="btn btn-primary mb-4 text-center float-right">Create Products</a>
         
           <table class="table">
             <thead>
@@ -32,9 +39,7 @@
              
         
                             <div id="rating_div">
-                                <div class="star-rating" style="
-                                color: darkorange;
-                            " >
+                                <div class="star-rating" style=" color: darkorange;" >
                                     <span class="fa divya fa-star{{ $products->rating>= 1 ? '' : '-o' }}" data-rating="1" ></span>
                                     <span class="fa divya fa-star{{ $products->rating>= 2 ? '' : '-o' }}" data-rating="2" ></span>
                                     <span class="fa divya fa-star{{ $products->rating>= 3 ? '' : '-o' }}" data-rating="3" ></span>
@@ -48,12 +53,13 @@
                     </td>
 
                     
-                     <td><a href="#" class="btn btn-danger  text-center ">delete</a></td>
+                     <td><a href="{{route('products.delete',$products->id) }}" class="btn btn-danger  text-center ">delete</a></td>
                   </tr>  
                 @endforeach
              
             </tbody>
           </table> 
+          
         </div>
       </div>
     </div>

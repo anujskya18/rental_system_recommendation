@@ -4,11 +4,16 @@
 
 <div id="page-content" class="page-content" style="margin-top:-25px">
         <div class="banner">
-            <div class="jumbotron jumbotron-video text-center bg-dark mb-0 rounded-0">
-                <video width="100%" preload="auto" loop autoplay muted>
+            <div class="jumbotron jumbotron-video text-center bg-dark mb-0 rounded-0 rounded-bottom" style="
+            width: 99%;
+            margin: auto;
+            /* margin-top: 84px; */
+        ">
+                {{-- <img src="{{ asset('assets/img/background.jpg')}}" alt=""> --}}
+                {{-- <video width="100%" preload="auto" loop autoplay muted>
                     <source src='assets/media/explore.mp4' type='video/mp4' />
                     <source src='assets/media/explore.webm' type='video/webm' />
-                </video>
+                </video> --}}
                 <div class="container">
                     <h1 class="pt-5">
                        Rent<br>
@@ -42,7 +47,7 @@
                             <div class="card border-0 text-center">
                                 <div class="card-icon">
                                     <div class="card-icon-i">
-                                        <i class="fas fa-leaf"></i>
+                                        <i class="fa     fa-handshake"></i>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -80,58 +85,40 @@
 
 
         <section id="why">
-            <h2 class="title">Why Freschery</h2>
+            <h2 class="title">Rental System</h2>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6    ">
                         <div class="card border-0 text-center gray-bg">
                             <div class="card-icon">
                                 <div class="card-icon-i text-success">
-                                    <i class="fas fa-leaf"></i>
+                                    <i class="fa fa-leaf"></i>                              
                                 </div>
                             </div>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    Straight from the Farm
+                                    Resources are hired to give results, not reasons.
                                 </h4>
                                 <p class="card-text">
-                                    Our farm-to-table concept emphasizes on getting the fresh produce directly from local farms to your tables within one day, hence you know you get the freshest produce straight from harvest.
+                                    Encourageing individuals by renting items to prioritize the outcomes and benefits they seek to achieve through the rental process
                                 </p>
 
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="card border-0 text-center gray-bg">
                             <div class="card-icon">
                                 <div class="card-icon-i text-success">
-                                    <i class="fa fa-question"></i>
+                                    <i class="fa fa-recycle"></i>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    Know Your Farmers
+                                    Rent smart, reuse often.
                                 </h4>
                                 <p class="card-text">
-                                    We want you to know exactly who is growing your food by having the farmers profile on each item and farmers page. You’re welcome to visit the farms and see the love they put into growing your food.
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card border-0 text-center gray-bg">
-                            <div class="card-icon">
-                                <div class="card-icon-i text-success">
-                                    <i class="fas fa-smile"></i>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    Improving Farmers’ Livelihood
-                                </h4>
-                                <p class="card-text">
-                                    Slowly but sure, by cutting the complex supply chain and food system, we hope to improve the welfare of farmers by giving them the returns they deserve for their hard work.
+                                    By reusing items instead of discarding them after a single use, can minimize environmental impact, reduce costs associated with frequent replacements, and contribute to a more sustainable business model.
                                 </p>
                             </div>
                         </div>

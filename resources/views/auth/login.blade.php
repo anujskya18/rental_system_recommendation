@@ -5,7 +5,7 @@
 
 <div id="page-content" class="page-content" style="margin-top:-25px">
         <div class="banner">
-            <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/bg-header.jpg');">
+            <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-color: #343a40 !important;">
                 <div class="container">
                     <h1 class="pt-5">
                         Login Page
