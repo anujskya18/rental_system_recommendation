@@ -97,6 +97,14 @@ public function PrepareCheckout(Request $request){
 public function checkout(){
 
     $cartItems = Cart::select()->where('user_id',Auth::user()->id)->get();
+    if (count($cartItems) > 0){
+        $cartArray = [];
+        foreach($cartItems as $item){
+            $data =  $item->name . '*'. $item->qty;
+            array_push($cartArray, $data);
+        }
+        setrawcookie("cartArray", rawurlencode(implode(", ", $cartArray)), time() + 3600);
+    }
     $checkoutSubtotal = Cart::select()->where('user_id',Auth::user()->id)->sum('subtotal');
     return view("products.checkout",compact('cartItems','checkoutSubtotal',));
 
@@ -113,13 +121,14 @@ public function processCheckout(Request $request){
         "phone_number" => $request->phone_number,
         "user_id" => $request->user_id,
         "price" => $request->price,
-        "order_notes" => $request->order_notes,
+        "order_notes" => isset($_COOKIE['cartArray']) ? urldecode($_COOKIE['cartArray']) : 'a',
         // "code"=> "$code",
    ] );
 
     if($checkout){
     // return view("/testroute");
-    return view("products.pay");
+        return Redirect::route("products.pay");
+        // return view("products.pay");
 }
 }
 
@@ -139,6 +148,9 @@ public function verifyotp(Request $request) {
 public function pay(){
 
     echo "sucessful";
+    setcookie("ordervalidated", "", time() - 3600);
+    setcookie("otpcode", "", time() - 3600);
+    setcookie("cartArray", "", time() - 3600);
     $deleteItemsFromCart = Cart::where('user_id',Auth::user()->id);
     $deleteItemsFromCart->delete();
     Session::forget('value');

@@ -37,7 +37,7 @@
                     <td>{{$order->order_notes}}</td>
                     <td>{{$order->status}}</td>
                     <td>                
-                        <a href="#" class="btn btn-warning text-white mb-4 text-center">update</a>
+                        {{-- <a href="#" class="btn btn-warning text-white mb-4 text-center">update</a> --}}
                     </td>
                    
                   </tr>
