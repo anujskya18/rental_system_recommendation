@@ -17,6 +17,7 @@ class Product extends Model
         "price",
         "category_id",
         "exp_date",
+        "rating"
 
     ];
     public $timestamps = "true";

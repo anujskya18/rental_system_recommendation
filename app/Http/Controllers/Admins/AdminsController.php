@@ -65,7 +65,7 @@ class AdminsController extends Controller
             "price" => $request->price,
             "description" => $request->description,
             "category_id" => $request->category_id,
-            "exp_date" => $request->exp_date,
+            // "exp_date" => $request->exp_date,
             "rating" => $request->rating,
             "image" => $myimage,
             

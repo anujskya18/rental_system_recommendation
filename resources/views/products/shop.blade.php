@@ -51,7 +51,7 @@
                                         <div class="card-badge">
                                             <div class="card-badge-container left">
                                                 <span class="badge badge-primary">
-                                                    Until {{$product->exp_date}}
+                                                    {{-- Until {{$product->exp_date}} --}}
                                                 </span>
                                             </div>
                                             <img src="{{asset('assets/img/'.$product->image.'')}}" alt="Card image 2" class="card-img-top">
@@ -96,10 +96,10 @@
                                         <div class="card-badge">
                                             <div class="card-badge-container left">
                                                 <span class="badge badge-primary">
-                                                    Until {{$product->exp_date}}
+                                                    {{-- Until {{$product->exp_date}} --}}
                                                 </span>
                                                 <span class="badge badge-primary">
-                                                    20% OFF
+                                                    {{-- 20% OFF --}}
                                                 </span>
                                             </div>
                                             <img src="{{asset('assets/img/'.$product->image.'')}}" alt="Card image 2" class="card-img-top">
@@ -144,10 +144,10 @@
                                         <div class="card-badge">
                                             <div class="card-badge-container left">
                                                 <span class="badge badge-primary">
-                                                    Until {{$product->exp_date}}
+                                                    {{-- Until {{$product->exp_date}} --}}
                                                 </span>
                                                 <span class="badge badge-primary">
-                                                    20% OFF
+                                                    {{-- 20% OFF --}}
                                                 </span>
                                             </div>
                                             <img src="{{asset('assets/img/'.$product->image.'')}}" alt="Card image 2" class="card-img-top">

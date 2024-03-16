@@ -52,6 +52,22 @@ class ProductsController extends Controller
         return Redirect::route("single.product",$request->pro_id)->with(['success'=>"product added to cart successfully"]);
     }
     }
+    public function updatecart(Request $request){
+
+        $cartItem = Cart::find($request->id,); 
+        $newQty = $request->qty;
+        $cartItem;
+        if ($cartItem) {
+            $cartItem->qty = $newQty;
+            $cartItem->subtotal = $newQty * $cartItem->price; // Update subtotal based on new quantity
+        
+            $cartItem->save(); // Save changes to the database
+        }
+    $cartProducts = Cart::select()->where('user_id',Auth::user()->id)->get();
+    $subtotal = cart::where('user_id',Auth::user()->id)->sum('subtotal');
+
+    return view('products.cart',compact('cartProducts','subtotal'));
+    }
     public function cart(){
     $cartProducts = Cart::select()->where('user_id',Auth::user()->id)->get();
     $subtotal = cart::where('user_id',Auth::user()->id)->sum('subtotal');

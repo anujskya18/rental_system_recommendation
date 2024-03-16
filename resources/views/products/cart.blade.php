@@ -49,13 +49,26 @@
                                     </td>
                                     <td>
                                         {{$product->name}}<br>
-                                        <small>1000g</small>
+                                        {{-- <small>1000g</small> --}}
                                     </td>
                                     <td>
-                                        Rs {{$product->price}}
+
+                         Rs {{$product->price}}
                                     </td>
                                     <td>
-                                        {{$product->qty}}
+                         <form action="{{route('products.updatecart')}}" method="post">
+                        @csrf
+                        <div class="col-sm-5 " style="padding: 1px;float: left;margin-right: 8px;">
+                            <input name="qty" class="form-control" type="number" min="1" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary" value="{{$product->qty}}" name="vertical-spin">
+                        </div>
+                        <button type="submit" name="submit" class=" btn btn-primary btn-sm" style="
+                        margin-top: 4px;
+                    ">s
+                                update
+                            </button>
+                        <input name="id" value="{{$product->id}}" type="hidden">
+                        </form> 
+                                                                   
                                     </td>
                                     <td>
                                         Rs {{ $product->price * $product->qty}}

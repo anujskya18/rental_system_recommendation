@@ -89,7 +89,7 @@
                             Rent For
                         </p>
                         </div> 
-                            <div class="col-sm-2 " style="float: left;">
+                            <div class="col-sm-3 " style="float: left;">
                                
                             <input name="qty" class="form-control" type="number" min="1" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary" value="1" name="vertical-spin">
                         </div> 
@@ -101,7 +101,6 @@
                         <input name="name" value="{{$product->name}}" type="hidden">
                         <input name="price" value="{{$product->price}}" type="hidden">
                         <input name="pro_id" value="{{$product->id}}" type="hidden">
-
                         <input name="image" value="{{$product->image}}" type="hidden">
                         @if(isset(auth::user()->id))
                             @if ($checkInCart >0)
@@ -111,7 +110,7 @@
                             @else 
                                 <button type="submit" name="submit" class="mt-3 btn btn-primary btn-lg">
                                     <i class="fa fa-shopping-basket"></i> Add to Cart
-                                    </button>
+                                </button>
                             @endif
                         @else
                         <p class="alert alert-success mt-5"> Login to add product to cart </p>

@@ -43,7 +43,7 @@
                 </select>
             </div>
 
-          <div class="form-group">
+          {{-- <div class="form-group">
               <label for="exampleFormControlSelect1">Select Expiration Date</label>
               <select name="exp_date" class="form-control" id="exampleFormControlSelect1">
                 <option>--select expiration date--</option>
@@ -52,7 +52,7 @@
                 <option value="2026">2026</option>
 
               </select>
-          </div>
+          </div> --}}
 
             <div class="form-outline mb-4 mt-4">
                 <label>Image</label>
