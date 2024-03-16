@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Mail\MyTestEmail;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,4 +57,12 @@ Route::group(['prefix' => '/admin','middleware' => 'auth:admin'],function() {
     Route::get('delete-products/{id}', [App\Http\Controllers\Admins\AdminsController::class, 'deleteProducts'])->name('products.delete');
     Route::get('all-orders', [App\Http\Controllers\Admins\AdminsController::class, 'displayOrders'])->name('orders.all');
 
+
 });
+    //mail 
+
+    Route::get('/testroute',function(){
+        $name = "Anuj";
+
+        Mail::to('anujskya18@gmail.com')->send(new MyTestEmail($name));
+    });
