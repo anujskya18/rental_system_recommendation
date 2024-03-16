@@ -35,7 +35,7 @@ Route::get('products/delete-cart/{id}', [App\Http\Controllers\Products\ProductsC
 Route::post('products/prepare-checkout', [App\Http\Controllers\Products\ProductsController::class, 'PrepareCheckout'])->name('products.prepare.checkout');
 Route::get('products/checkout', [App\Http\Controllers\Products\ProductsController::class, 'checkout'])->name('products.checkout');
 Route::post('products/checkout', [App\Http\Controllers\Products\ProductsController::class, 'processCheckout'])->name('products.process.checkout');
-Route::post('products/checkout', [App\Http\Controllers\Products\ProductsController::class, 'processCheckout'])->name('products.process.checkout');
+Route::post('products/otp', [App\Http\Controllers\Products\ProductsController::class, 'verifyotp'])->name('products.verify.otp');
 Route::get('products/pay', [App\Http\Controllers\Products\ProductsController::class, 'pay'])->name('products.pay');
 
 
@@ -61,8 +61,11 @@ Route::group(['prefix' => '/admin','middleware' => 'auth:admin'],function() {
 });
     //mail 
 
-    Route::get('/testroute',function(){
+    Route::post('/testroute',function(){
         $name = "Anuj";
+        $code = random_int(100000, 999999); // Generates a random integer
+        $otp1 =$code;
+        Mail::to('anujskya18@gmail.com')->send(new MyTestEmail($name,$otp1));
+        return view("products.otp")->with(['code' => $code]);
 
-        Mail::to('anujskya18@gmail.com')->send(new MyTestEmail($name));
     });

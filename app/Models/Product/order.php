@@ -20,6 +20,7 @@ class order extends Model
         "user_id",
         "order_notes",
         "status",
+        // "code",
 
     ];
 

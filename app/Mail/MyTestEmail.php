@@ -16,7 +16,7 @@ class MyTestEmail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(private $name)
+    public function __construct(private $name,private $code)
     {
         //
     }
@@ -38,10 +38,9 @@ class MyTestEmail extends Mailable
     {
         return new Content(
             view: 'mail.test-email',
-            with:['name'=>$this->name]
-        );
+            with: ['name' => $this->name, 'code' => $this->code]        );
     }
-
+    
     /**
      * Get the attachments for the message.
      *

@@ -1,2 +1,2 @@
 Hey {{$name}},
-your otp is asdf
+your otp is {{$code}}

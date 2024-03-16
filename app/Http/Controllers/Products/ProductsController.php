@@ -103,6 +103,7 @@ public function checkout(){
 }
 
 public function processCheckout(Request $request){
+    $code = random_int(100000, 999999); // Generates a random integer
     $checkout = Order::create([
 
         "name" => $request->name,
@@ -113,11 +114,22 @@ public function processCheckout(Request $request){
         "user_id" => $request->user_id,
         "price" => $request->price,
         "order_notes" => $request->order_notes,
+        // "code"=> "$code",
    ] );
 
     if($checkout){
-    return Redirect::route("products.pay");
+    // return view("/testroute");
+    return view("products.otp");
 }
+}
+
+public function verifyotp(Request $request) {
+
+    $otp = $request->otp;
+    // echo $code; 
+    if ($otp){
+        return Redirect::route("products.pay");
+    }
 
 }
 
