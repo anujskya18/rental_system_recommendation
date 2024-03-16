@@ -61,11 +61,12 @@ Route::group(['prefix' => '/admin','middleware' => 'auth:admin'],function() {
 });
     //mail 
 
-    Route::post('/testroute',function(){
+    Route::get('/testroute',function(){
         $name = "Anuj";
         $code = random_int(100000, 999999); // Generates a random integer
         $otp1 =$code;
         Mail::to('anujskya18@gmail.com')->send(new MyTestEmail($name,$otp1));
-        return view("products.otp")->with(['code' => $code]);
+        return response()->json(['success' => true,'code' => $code]);
+        //return view("products.otp")->with(['code' => $code]);
 
     });

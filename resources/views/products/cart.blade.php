@@ -91,10 +91,10 @@
                     <div class="clearfix"></div>
                     <h6 class="mt-3">Total: Rs {{$subtotal}}</h6>
                     @if ($subtotal > 0)
-                    <form action="{{route('products.prepare.checkout')}}" method="post">
+                    <form action="{{route('products.verify.otp')}}" method="post">
                         @csrf
                         <input type="hidden" name="price" value="{{$subtotal}}">
-                        <button type="submit" href="checkout.html" class="btn btn-lg btn-primary">Checkout <i class="fa fa-long-arrow-right"></i></button>
+                        <button type="submit" href="checkout.html" class="btn btn-lg btn-primary">Verify OTP <i class="fa fa-long-arrow-right"></i></button>
                     </form>
                     @else
                     <p class="alert alert-success"> You have no products in cart you cant checkout</p>
